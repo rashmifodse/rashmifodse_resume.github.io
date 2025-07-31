@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashmi Phodse - Resume</title>
+    <title>Rashmi Phodse - CV</title>
     <style>
         @media print {
-            body { margin: 0; font-size: 11pt; line-height: 1.4; }
+            body { margin: 0; font-size: 11pt; }
             .no-print { display: none; }
             .page-break { page-break-before: always; }
             a { color: #004080 !important; text-decoration: underline !important; }
-            .portfolio-banner { background: #004080 !important; }
         }
         
         body {
@@ -27,7 +26,7 @@
             text-align: center;
             border-bottom: 3px solid #004080;
             padding-bottom: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .header h1 {
@@ -54,63 +53,28 @@
             margin: 0 15px;
         }
         
-        /* Portfolio Banner - Most Important */
-        .portfolio-banner {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .portfolio-banner h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.4em;
-        }
-        
         .portfolio-link {
-            background: white;
-            color: #004080 !important;
-            padding: 12px 25px;
+            background: #004080;
+            color: white !important;
+            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 5px;
             display: inline-block;
+            margin-top: 15px;
             font-weight: 600;
-            font-size: 1.1em;
-            transition: transform 0.3s;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
         }
         
         .portfolio-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .download-btn {
-            background: #28a745;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            margin: 20px 10px 20px 0;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .download-btn:hover {
-            background: #218838;
+            background: #0056b3;
         }
         
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
         
         .section h2 {
-            font-size: 1.3em;
+            font-size: 1.4em;
             color: #004080;
             border-bottom: 2px solid #004080;
             padding-bottom: 5px;
@@ -119,51 +83,50 @@
         }
         
         .summary {
-            font-size: 1.05em;
+            font-size: 1.1em;
             text-align: justify;
             background: #f8f9fa;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             border-left: 4px solid #004080;
-            margin-bottom: 20px;
         }
         
         .metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
-            margin: 15px 0;
+            margin: 20px 0;
         }
         
         .metric-card {
             text-align: center;
             background: linear-gradient(135deg, #004080, #0056b3);
             color: white;
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
         }
         
         .metric-value {
-            font-size: 1.3em;
+            font-size: 1.5em;
             font-weight: bold;
             display: block;
         }
         
         .metric-label {
-            font-size: 0.85em;
+            font-size: 0.9em;
             opacity: 0.9;
         }
         
         .job {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .job-header {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         
         .job-title {
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: 600;
             color: #004080;
         }
@@ -175,85 +138,83 @@
         
         .location-date {
             color: #666;
-            font-size: 0.9em;
-        }
-        
-        .achievements ul {
-            margin: 8px 0 15px 20px;
-            padding: 0;
-        }
-        
-        .achievements li {
-            margin-bottom: 6px;
-            line-height: 1.3;
             font-size: 0.95em;
+        }
+        
+        .achievements {
+            margin-top: 10px;
         }
         
         .achievement-category {
             font-weight: 600;
             color: #004080;
-            margin-top: 12px;
+            margin-top: 15px;
             margin-bottom: 5px;
-            font-size: 0.95em;
+        }
+        
+        .achievements ul {
+            margin: 5px 0 15px 20px;
+            padding: 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
         
         .skill-category h3 {
             color: #004080;
-            font-size: 1em;
-            margin-bottom: 8px;
+            font-size: 1.1em;
+            margin-bottom: 10px;
             font-weight: 600;
         }
         
         .skill-list {
             list-style: none;
             padding: 0;
-            font-size: 0.9em;
         }
         
         .skill-list li {
-            padding: 3px 0;
+            padding: 5px 0;
             border-bottom: 1px solid #eee;
         }
         
         .cert-list {
             list-style: none;
             padding: 0;
-            font-size: 0.9em;
         }
         
         .cert-list li {
-            padding: 5px 0;
+            padding: 8px 0;
             border-bottom: 1px solid #eee;
         }
         
         .cert-category {
             font-weight: 600;
             color: #004080;
-            margin-top: 12px;
-            margin-bottom: 6px;
-            font-size: 0.95em;
+            margin-top: 15px;
+            margin-bottom: 8px;
         }
         
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .metrics {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info span {
-                display: block;
-                margin: 5px 0;
-            }
+        .download-btn {
+            background: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 20px 10px 20px 0;
+        }
+        
+        .download-btn:hover {
+            background: #218838;
         }
     </style>
 </head>
@@ -266,23 +227,18 @@
             <span>✉ rashmifodse@gmail.com</span>
             <span>📞 +91 72087 38943</span>
         </div>
-    </div>
-
-    <!-- Portfolio Banner - Most Prominent -->
-    <div class="portfolio-banner">
-        <h3>🚀 For Detailed Case Studies & Visual Proof of Results</h3>
         <a href="https://bit.ly/rashmifodse" target="_blank" class="portfolio-link">
-            📊 VIEW COMPLETE PORTFOLIO
+            🔗 View Complete Portfolio
         </a>
-        <p style="margin: 15px 0 0 0; font-size: 0.95em; opacity: 0.9;">
-            See live screenshots, detailed analytics, and step-by-step case studies
-        </p>
+        <div class="no-print">
+            <button class="download-btn" onclick="window.print()">📄 Download PDF</button>
+        </div>
     </div>
 
     <div class="section">
         <h2>Professional Summary</h2>
         <div class="summary">
-            Performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation — consistently delivering measurable growth in traffic, leads, and engagement. Specialized in building complete lead-generation systems that turn digital content into real sales.
+            Performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation — consistently delivering measurable growth in traffic, leads, and engagement. Specialized in building complete lead-generation systems that turn digital content into real sales, with proven expertise in reducing cost per lead by 60% while generating substantial revenue attribution.
         </div>
         
         <div class="metrics">
@@ -313,28 +269,31 @@
                 <div><span class="company">Swagat Properties</span> | <span class="location-date">Thane, Maharashtra | 2022–Present</span></div>
             </div>
             <div class="achievements">
-                <div class="achievement-category">YOUTUBE & CONTENT STRATEGY</div>
+                <div class="achievement-category">CONTENT + VIDEO STRATEGY</div>
                 <ul>
-                    <li>Developed comprehensive YouTube strategy for Marathi-speaking audience, increasing CTR by 45%</li>
-                    <li>Generated ₹1,82,273 in YouTube revenue while growing subscribers from 600 to 12,000</li>
-                    <li>Attributed 70% of total sales pipeline to inbound YouTube content and SEO-driven funnels</li>
-                    <li>Achieved ₹5L+ monthly pipeline with only ₹8K/month ad budget (62.5x ROAS)</li>
+                    <li>Developed comprehensive YouTube strategy for Marathi-speaking audience, increasing channel CTR by 45%</li>
+                    <li>Attributed 70% of total sales pipeline to inbound YouTube content and SEO-driven video funnels</li>
+                    <li>Generated ₹5L+ monthly pipeline directly from YouTube and local SEO efforts with only ₹8K/month ad budget (62.5x ROAS)</li>
+                    <li>Achieved YouTube monetization and improved audience retention by 200%</li>
+                    <li>Grew YouTube channel from 600 to 12,000 subscribers</li>
+                    <li>Generated ₹179,000 revenue through YouTube marketing strategy</li>
                 </ul>
                 
-                <div class="achievement-category">LOCAL SEO & GOOGLE OPTIMIZATION</div>
+                <div class="achievement-category">LOCAL SEO & GOOGLE BUSINESS OPTIMIZATION</div>
                 <ul>
-                    <li>Achieved #1 Google ranking for "Property consultant Thane" and 12+ high-intent keywords</li>
-                    <li>Generated 500,000+ Google Maps views and managed 1,365+ reviews (4.9-star rating)</li>
-                    <li>Increased business calls by 74.2% (1,063 → 1,848) and interactions by 78.6%</li>
-                    <li>Reduced cost-per-lead to ₹47 vs industry average of ₹150</li>
+                    <li>Achieved #1 Google ranking for competitive local keywords including "Property consultant Thane"</li>
+                    <li>Secured 12+ high-intent search rankings in Google's top 3-pack</li>
+                    <li>Boosted non-video organic leads by 42%</li>
+                    <li>Reduced cost-per-lead to ₹47 (industry average: ₹150)</li>
+                    <li>Managed 1,365+ customer reviews maintaining 4.9-star rating</li>
                 </ul>
                 
-                <div class="achievement-category">PAID ADVERTISING & AUTOMATION</div>
+                <div class="achievement-category">DIGITAL OPERATIONS & AUTOMATION</div>
                 <ul>
-                    <li>Managed Google Ads campaigns achieving 47.85% conversion rate and 9.25% ROAS</li>
-                    <li>Generated 823 qualified leads in 2 months with ₹5.2L attributed sales</li>
-                    <li>Built WordPress websites, GA4 dashboards, and automated CRM lead tracking systems</li>
-                    <li>Delivered 60% of total company leads through integrated organic marketing efforts</li>
+                    <li>Built and managed multiple WordPress websites with comprehensive on-page SEO</li>
+                    <li>Created complete tracking dashboards using GA4 + Search Console</li>
+                    <li>Managed CRM setup, lead tracking, and automated follow-up systems</li>
+                    <li>Delivered 60% of total company leads through organic marketing efforts</li>
                 </ul>
             </div>
         </div>
@@ -344,53 +303,54 @@
         <h2>Core Skills & Expertise</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>YouTube & Video Marketing</h3>
-                <ul class="skill-list">
-                    <li>Channel Growth & Monetization</li>
-                    <li>YouTube SEO & Analytics</li>
-                    <li>Video Editing (CapCut/Adobe)</li>
-                    <li>Thumbnail Design & Optimization</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>SEO & Local Search</h3>
-                <ul class="skill-list">
-                    <li>Local SEO & Google My Business</li>
-                    <li>Keyword Research & Content Optimization</li>
-                    <li>Technical SEO & Site Audits</li>
-                    <li>SEMrush, GA4, Search Console</li>
-                </ul>
-            </div>
-            <div class="skill-category">
                 <h3>Paid Advertising</h3>
                 <ul class="skill-list">
-                    <li>Google Ads (Search & Display)</li>
+                    <li>Google Ads Management & Optimization</li>
                     <li>Meta Ads (Facebook/Instagram)</li>
-                    <li>YouTube Ads & Campaign Optimization</li>
-                    <li>Conversion Tracking & ROI Analysis</li>
+                    <li>YouTube Ads</li>
+                    <li>Keyword Research & Campaign Strategy</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h3>Marketing Technology</h3>
+                <h3>SEO & Analytics</h3>
                 <ul class="skill-list">
-                    <li>WordPress/Elementor Development</li>
-                    <li>CRM Management & Automation</li>
-                    <li>Google Tag Manager & Analytics</li>
+                    <li>YouTube SEO & Local SEO</li>
+                    <li>Google My Business Optimization</li>
+                    <li>SEMrush, VidIQ, GA4</li>
+                    <li>Performance Tracking & ROI Analysis</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Content Creation</h3>
+                <ul class="skill-list">
+                    <li>Video Editing (CapCut/Adobe)</li>
+                    <li>Graphic Design (Canva Pro)</li>
+                    <li>Bilingual Content (Hindi/Marathi)</li>
+                    <li>Ad Copy & Marketing Content</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Marketing Systems</h3>
+                <ul class="skill-list">
                     <li>Lead Generation & Landing Pages</li>
+                    <li>CRM Management & Automation</li>
+                    <li>WordPress/Elementor Development</li>
+                    <li>Marketing Dashboard Creation</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="section">
+    <div class="section page-break">
         <h2>Certifications & Education</h2>
         <ul class="cert-list">
             <div class="cert-category">Digital Marketing & Strategy</div>
             <li>Digital Marketing & Strategy – IIM Bangalore (Swayam)</li>
             <li>AI in Digital Marketing & Social Media Marketing – IIMB (Swayam)</li>
             <li>Google Fundamentals of Digital Marketing</li>
-            <li>Google Ads Certification (Search & Display Ads)</li>
+            <li>Marketing Research & Analysis – NPTEL</li>
             <li>YouTube Creator Academy (Monetization)</li>
+            <li>Google Ads Certification (Search & Display Ads)</li>
             
             <div class="cert-category">SEO & Analytics</div>
             <li>HubSpot SEO Certification – HubSpot Academy</li>
@@ -399,55 +359,55 @@
         </ul>
     </div>
 
-    <!-- Portfolio Call-to-Action Footer -->
-    <div class="portfolio-banner" style="margin-top: 30px;">
-        <h3>📈 Want to See the Complete Picture?</h3>
-        <a href="https://bit.ly/rashmifodse" target="_blank" class="portfolio-link">
-            🔗 VIEW DETAILED CASE STUDIES
-        </a>
-        <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
-            Screenshots of actual results • Step-by-step strategies • Visual proof of ROI
-        </p>
+    <div class="section">
+        <h2>Technical Proficiency</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Analytics & Tracking</h3>
+                <ul class="skill-list">
+                    <li>Google Analytics (GA4)</li>
+                    <li>Google Tag Manager</li>
+                    <li>Google Search Console</li>
+                    <li>Hotjar</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Marketing Tools</h3>
+                <ul class="skill-list">
+                    <li>SEMRush, VidIQ</li>
+                    <li>Google Workspace</li>
+                    <li>ChatGPT</li>
+                    <li>Adobe Creative Suite</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div style="text-align: center; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <h3 style="color: #004080; margin-bottom: 15px;">Ready to Discuss Your Next Project?</h3>
+            <p>Contact me at <strong>rashmifodse@gmail.com</strong> or <strong>+91 72087 38943</strong></p>
+            <a href="https://bit.ly/rashmifodse" target="_blank" style="color: #004080; font-weight: 600;">
+                📊 View Detailed Case Studies & Portfolio
+            </a>
+        </div>
     </div>
 
     <script>
-        // PDF Download Function
-        function downloadPDF() {
-            // Hide the buttons before printing
-            const buttons = document.querySelector('.no-print');
-            if (buttons) buttons.style.display = 'none';
-            
-            // Trigger print dialog
-            window.print();
-            
-            // Show buttons again after print dialog closes
-            setTimeout(() => {
-                if (buttons) buttons.style.display = 'block';
-            }, 1000);
-        }
-        
         // Optimize for printing
         window.addEventListener('beforeprint', function() {
             document.body.style.fontSize = '11pt';
             document.body.style.lineHeight = '1.4';
-            // Hide all no-print elements
-            const noPrintElements = document.querySelectorAll('.no-print');
-            noPrintElements.forEach(el => el.style.display = 'none');
         });
         
         window.addEventListener('afterprint', function() {
             document.body.style.fontSize = '';
             document.body.style.lineHeight = '';
-            // Show no-print elements again
-            const noPrintElements = document.querySelectorAll('.no-print');
-            noPrintElements.forEach(el => el.style.display = 'block');
         });
         
         // Track portfolio link clicks
-        document.querySelectorAll('.portfolio-link').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Portfolio link clicked from resume');
-            });
+        document.querySelector('.portfolio-link').addEventListener('click', function() {
+            console.log('Portfolio link clicked');
         });
     </script>
 </body>
