@@ -267,8 +267,7 @@
             <span>📞 +91 72087 38943</span>
         </div>
         <div class="no-print">
-            <button class="download-btn" onclick="downloadPDF()">📄 Download PDF</button>
-            <button class="download-btn" onclick="window.print()" style="background: #17a2b8; margin-left: 10px;">🖨️ Print Resume</button>
+            <button class="download-btn" onclick="window.print()">📄 Download PDF</button>
         </div>
     </div>
 
@@ -415,36 +414,15 @@
     </div>
 
     <script>
-        // PDF Download Function
-        function downloadPDF() {
-            // Hide the buttons before printing
-            const buttons = document.querySelector('.no-print');
-            if (buttons) buttons.style.display = 'none';
-            
-            // Trigger print dialog
-            window.print();
-            
-            // Show buttons again after print dialog closes
-            setTimeout(() => {
-                if (buttons) buttons.style.display = 'block';
-            }, 1000);
-        }
-        
         // Optimize for printing
         window.addEventListener('beforeprint', function() {
             document.body.style.fontSize = '11pt';
             document.body.style.lineHeight = '1.4';
-            // Hide all no-print elements
-            const noPrintElements = document.querySelectorAll('.no-print');
-            noPrintElements.forEach(el => el.style.display = 'none');
         });
         
         window.addEventListener('afterprint', function() {
             document.body.style.fontSize = '';
             document.body.style.lineHeight = '';
-            // Show no-print elements again
-            const noPrintElements = document.querySelectorAll('.no-print');
-            noPrintElements.forEach(el => el.style.display = 'block');
         });
         
         // Track portfolio link clicks
