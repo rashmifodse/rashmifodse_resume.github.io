@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashmi Phodse - Resume</title>
+    <style>
+        @media print {
+            body { margin: 0; font-size: 11pt; line-height: 1.4; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+            a { color: #004080 !important; text-decoration: underline !important; }
+            .portfolio-banner { background: #004080 !important; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #004080;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #004080;
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        .header .title {
+            font-size: 1.3em;
+            color: #666;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            font-size: 1em;
+            color: #555;
+            margin: 15px 0;
+        }
+        
+        .contact-info span {
+            margin: 0 15px;
+        }
+        
+        /* Portfolio Banner - Most Important */
+        .portfolio-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .portfolio-banner h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.4em;
+        }
+        
+        .portfolio-link {
+            background: white;
+            color: #004080 !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .portfolio-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .download-btn {
+            background: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 20px 10px 20px 0;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn:hover {
+            background: #218838;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h2 {
+            font-size: 1.3em;
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            text-align: justify;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #004080;
+            margin-bottom: 20px;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .metric-card {
+            text-align: center;
+            background: linear-gradient(135deg, #004080, #0056b3);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        
+        .metric-value {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+        
+        .job {
+            margin-bottom: 20px;
+        }
+        
+        .job-header {
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #004080;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .location-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .achievements ul {
+            margin: 8px 0 15px 20px;
+            padding: 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 6px;
+            line-height: 1.3;
+            font-size: 0.95em;
+        }
+        
+        .achievement-category {
+            font-weight: 600;
+            color: #004080;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category h3 {
+            color: #004080;
+            font-size: 1em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
+        }
+        
+        .skill-list li {
+            padding: 3px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cert-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
+        }
+        
+        .cert-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cert-category {
+            font-weight: 600;
+            color: #004080;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info span {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Rashmi Phodse</h1>
+        <div class="title">Growth Marketing Specialist | YouTube Manager & SEO Analyst</div>
+        <div class="contact-info">
+            <span>📍 Thane, Maharashtra</span>
+            <span>✉ rashmifodse@gmail.com</span>
+            <span>📞 +91 72087 38943</span>
+        </div>
+    </div>
+
+    <!-- Portfolio Banner - Most Prominent -->
+    <div class="portfolio-banner">
+        <h3>🚀 For Detailed Case Studies & Visual Proof of Results</h3>
+        <a href="https://bit.ly/rashmifodse" target="_blank" class="portfolio-link">
+            📊 VIEW COMPLETE PORTFOLIO
+        </a>
+        <p style="margin: 15px 0 0 0; font-size: 0.95em; opacity: 0.9;">
+            See live screenshots, detailed analytics, and step-by-step case studies
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <div class="summary">
+            Performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation — consistently delivering measurable growth in traffic, leads, and engagement. Specialized in building complete lead-generation systems that turn digital content into real sales.
+        </div>
+        
+        <div class="metrics">
+            <div class="metric-card">
+                <span class="metric-value">3M+</span>
+                <span class="metric-label">YouTube Views</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">₹50L+</span>
+                <span class="metric-label">Sales Attribution</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">800+</span>
+                <span class="metric-label">Qualified Leads</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-value">18x</span>
+                <span class="metric-label">Average ROI</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title">Digital Marketing Specialist</div>
+                <div><span class="company">Swagat Properties</span> | <span class="location-date">Thane, Maharashtra | 2022–Present</span></div>
+            </div>
+            <div class="achievements">
+                <div class="achievement-category">YOUTUBE & CONTENT STRATEGY</div>
+                <ul>
+                    <li>Developed comprehensive YouTube strategy for Marathi-speaking audience, increasing CTR by 45%</li>
+                    <li>Generated ₹1,82,273 in YouTube revenue while growing subscribers from 600 to 12,000</li>
+                    <li>Attributed 70% of total sales pipeline to inbound YouTube content and SEO-driven funnels</li>
+                    <li>Achieved ₹5L+ monthly pipeline with only ₹8K/month ad budget (62.5x ROAS)</li>
+                </ul>
+                
+                <div class="achievement-category">LOCAL SEO & GOOGLE OPTIMIZATION</div>
+                <ul>
+                    <li>Achieved #1 Google ranking for "Property consultant Thane" and 12+ high-intent keywords</li>
+                    <li>Generated 500,000+ Google Maps views and managed 1,365+ reviews (4.9-star rating)</li>
+                    <li>Increased business calls by 74.2% (1,063 → 1,848) and interactions by 78.6%</li>
+                    <li>Reduced cost-per-lead to ₹47 vs industry average of ₹150</li>
+                </ul>
+                
+                <div class="achievement-category">PAID ADVERTISING & AUTOMATION</div>
+                <ul>
+                    <li>Managed Google Ads campaigns achieving 47.85% conversion rate and 9.25% ROAS</li>
+                    <li>Generated 823 qualified leads in 2 months with ₹5.2L attributed sales</li>
+                    <li>Built WordPress websites, GA4 dashboards, and automated CRM lead tracking systems</li>
+                    <li>Delivered 60% of total company leads through integrated organic marketing efforts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Core Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>YouTube & Video Marketing</h3>
+                <ul class="skill-list">
+                    <li>Channel Growth & Monetization</li>
+                    <li>YouTube SEO & Analytics</li>
+                    <li>Video Editing (CapCut/Adobe)</li>
+                    <li>Thumbnail Design & Optimization</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>SEO & Local Search</h3>
+                <ul class="skill-list">
+                    <li>Local SEO & Google My Business</li>
+                    <li>Keyword Research & Content Optimization</li>
+                    <li>Technical SEO & Site Audits</li>
+                    <li>SEMrush, GA4, Search Console</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Paid Advertising</h3>
+                <ul class="skill-list">
+                    <li>Google Ads (Search & Display)</li>
+                    <li>Meta Ads (Facebook/Instagram)</li>
+                    <li>YouTube Ads & Campaign Optimization</li>
+                    <li>Conversion Tracking & ROI Analysis</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Marketing Technology</h3>
+                <ul class="skill-list">
+                    <li>WordPress/Elementor Development</li>
+                    <li>CRM Management & Automation</li>
+                    <li>Google Tag Manager & Analytics</li>
+                    <li>Lead Generation & Landing Pages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Certifications & Education</h2>
+        <ul class="cert-list">
+            <div class="cert-category">Digital Marketing & Strategy</div>
+            <li>Digital Marketing & Strategy – IIM Bangalore (Swayam)</li>
+            <li>AI in Digital Marketing & Social Media Marketing – IIMB (Swayam)</li>
+            <li>Google Fundamentals of Digital Marketing</li>
+            <li>Google Ads Certification (Search & Display Ads)</li>
+            <li>YouTube Creator Academy (Monetization)</li>
+            
+            <div class="cert-category">SEO & Analytics</div>
+            <li>HubSpot SEO Certification – HubSpot Academy</li>
+            <li>Advanced Google Analytics (GA4)</li>
+            <li>Advanced SEO Certification – Simplilearn</li>
+        </ul>
+    </div>
+
+    <!-- Portfolio Call-to-Action Footer -->
+    <div class="portfolio-banner" style="margin-top: 30px;">
+        <h3>📈 Want to See the Complete Picture?</h3>
+        <a href="https://bit.ly/rashmifodse" target="_blank" class="portfolio-link">
+            🔗 VIEW DETAILED CASE STUDIES
+        </a>
+        <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
+            Screenshots of actual results • Step-by-step strategies • Visual proof of ROI
+        </p>
+    </div>
+
+    <script>
+        // PDF Download Function
+        function downloadPDF() {
+            // Hide the buttons before printing
+            const buttons = document.querySelector('.no-print');
+            if (buttons) buttons.style.display = 'none';
+            
+            // Trigger print dialog
+            window.print();
+            
+            // Show buttons again after print dialog closes
+            setTimeout(() => {
+                if (buttons) buttons.style.display = 'block';
+            }, 1000);
+        }
+        
+        // Optimize for printing
+        window.addEventListener('beforeprint', function() {
+            document.body.style.fontSize = '11pt';
+            document.body.style.lineHeight = '1.4';
+            // Hide all no-print elements
+            const noPrintElements = document.querySelectorAll('.no-print');
+            noPrintElements.forEach(el => el.style.display = 'none');
+        });
+        
+        window.addEventListener('afterprint', function() {
+            document.body.style.fontSize = '';
+            document.body.style.lineHeight = '';
+            // Show no-print elements again
+            const noPrintElements = document.querySelectorAll('.no-print');
+            noPrintElements.forEach(el => el.style.display = 'block');
+        });
+        
+        // Track portfolio link clicks
+        document.querySelectorAll('.portfolio-link').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Portfolio link clicked from resume');
+            });
+        });
+    </script>
+</body>
+</html>
