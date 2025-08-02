@@ -3,434 +3,558 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashmi Phodse - Resume</title>
+    <title>Digital Marketing Portfolio - Growth Marketing Specialist</title>
     <style>
-        @media print {
-            body { margin: 0; font-size: 11pt; line-height: 1.4; }
-            .no-print { display: none; }
-            .page-break { page-break-before: always; }
-            a { color: #004080 !important; text-decoration: underline !important; }
-            .portfolio-banner { background: #004080 !important; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background: white;
+            padding: 40px 20px;
         }
-        
-        .header {
+
+        header {
             text-align: center;
-            border-bottom: 3px solid #004080;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e5e7eb;
         }
-        
-        .header h1 {
+
+        h1 {
             font-size: 2.5em;
-            color: #004080;
-            margin: 0;
+            margin-bottom: 15px;
+            color: #1f2937;
             font-weight: 700;
         }
-        
-        .header .title {
-            font-size: 1.3em;
-            color: #666;
-            margin: 10px 0;
-            font-weight: 500;
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #6b7280;
+            margin-bottom: 30px;
         }
-        
-        .contact-info {
-            font-size: 1em;
-            color: #555;
-            margin: 15px 0;
-        }
-        
-        .contact-info span {
-            margin: 0 15px;
-        }
-        
-        /* Portfolio Banner - Most Important */
-        .portfolio-banner {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .portfolio-banner h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.4em;
-        }
-        
-        .portfolio-link {
-            background: white;
-            color: #004080 !important;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            display: inline-block;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: transform 0.3s;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .portfolio-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .download-btn {
-            background: #28a745;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            margin: 20px 10px 20px 0;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .download-btn:hover {
-            background: #218838;
-        }
-        
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .section h2 {
-            font-size: 1.3em;
-            color: #004080;
-            border-bottom: 2px solid #004080;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .summary {
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
             font-size: 1.05em;
-            text-align: justify;
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #004080;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .intro-text p {
             margin-bottom: 20px;
         }
-        
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
-        }
-        
-        .metric-card {
-            text-align: center;
-            background: linear-gradient(135deg, #004080, #0056b3);
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-        }
-        
-        .metric-value {
-            font-size: 1.3em;
-            font-weight: bold;
-            display: block;
-        }
-        
-        .metric-label {
-            font-size: 0.85em;
-            opacity: 0.9;
-        }
-        
-        .job {
-            margin-bottom: 20px;
-        }
-        
-        .job-header {
-            margin-bottom: 8px;
-        }
-        
-        .job-title {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #004080;
-        }
-        
-        .company {
-            font-weight: 600;
-            color: #333;
-        }
-        
-        .location-date {
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .achievements ul {
-            margin: 8px 0 15px 20px;
-            padding: 0;
-        }
-        
-        .achievements li {
-            margin-bottom: 6px;
-            line-height: 1.3;
-            font-size: 0.95em;
-        }
-        
-        .achievement-category {
-            font-weight: 600;
-            color: #004080;
-            margin-top: 12px;
-            margin-bottom: 5px;
-            font-size: 0.95em;
-        }
-        
-        .skills-grid {
+
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            gap: 30px;
+            margin: 40px 0;
         }
-        
-        .skill-category h3 {
-            color: #004080;
-            font-size: 1em;
+
+        .stat-box {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #1f2937;
+            display: block;
             margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .section {
+            margin: 60px 0;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #1f2937;
             font-weight: 600;
+            border-left: 4px solid #3b82f6;
+            padding-left: 20px;
         }
-        
-        .skill-list {
-            list-style: none;
-            padding: 0;
-            font-size: 0.9em;
+
+        .section-description {
+            margin-bottom: 40px;
+            font-size: 1.05em;
+            color: #374151;
+            line-height: 1.6;
         }
-        
-        .skill-list li {
-            padding: 3px 0;
-            border-bottom: 1px solid #eee;
+
+        .section-description p {
+            margin-bottom: 15px;
         }
-        
-        .cert-list {
-            list-style: none;
-            padding: 0;
-            font-size: 0.9em;
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
         }
-        
-        .cert-list li {
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
+
+        .result-card {
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
         }
-        
-        .cert-category {
+
+        .card-title {
+            font-size: 1.3em;
             font-weight: 600;
-            color: #004080;
-            margin-top: 12px;
-            margin-bottom: 6px;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .highlight-box {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .highlight-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 15px;
+        }
+
+        .highlight-content {
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .screenshot-area {
+            background: #f9fafb;
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .screenshot-area h4 {
+            color: #6b7280;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .screenshot-area p {
+            color: #9ca3af;
             font-size: 0.95em;
         }
-        
-        /* Mobile Responsive */
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .tool-category {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .tool-category h4 {
+            color: #1f2937;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .tool-list {
+            list-style: none;
+        }
+
+        .tool-list li {
+            padding: 8px 0;
+            color: #6b7280;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .tool-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-section {
+            background: #f9fafb;
+            padding: 50px 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .contact-title {
+            font-size: 1.6em;
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .contact-description {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 1.05em;
+        }
+
+        .contact-button {
+            background: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: #2563eb;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            color: #6b7280;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
         @media (max-width: 768px) {
-            .metrics {
-                grid-template-columns: 1fr 1fr;
+            h1 {
+                font-size: 2em;
             }
             
-            .skills-grid {
+            .results-grid {
                 grid-template-columns: 1fr;
             }
             
-            .contact-info span {
-                display: block;
-                margin: 5px 0;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Rashmi Phodse</h1>
-        <div class="title">Growth Marketing Specialist | YouTube Manager & SEO Analyst</div>
-        <div class="contact-info">
-            <span>📍 Thane, Maharashtra</span>
-            <span>✉ rashmifodse@gmail.com</span>
-            <span>📞 +91 72087 38943</span>
-        </div>
-        <div class="no-print">
-            <button class="download-btn" onclick="window.print()">📄 Download PDF</button>
-        </div>
-    </div>
-
-    <!-- Portfolio Banner - Most Prominent -->
-    <div class="portfolio-banner">
-        <h3>🚀 For Detailed Case Studies & Visual Proof of Results</h3>
-        <a href="https://bit.ly/rashmifodse" target="_blank" class="portfolio-link">
-            📊 VIEW COMPLETE PORTFOLIO
-        </a>
-        <p style="margin: 15px 0 0 0; font-size: 0.95em; opacity: 0.9;">
-            See live screenshots, detailed analytics, and step-by-step case studies
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <div class="summary">
-            Performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation — consistently delivering measurable growth in traffic, leads, and engagement. Specialized in building complete lead-generation systems that turn digital content into real sales.
-        </div>
-        
-        <div class="metrics">
-            <div class="metric-card">
-                <span class="metric-value">3M+</span>
-                <span class="metric-label">YouTube Views</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">₹50L+</span>
-                <span class="metric-label">Sales Attribution</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">800+</span>
-                <span class="metric-label">Qualified Leads</span>
-            </div>
-            <div class="metric-card">
-                <span class="metric-value">18x</span>
-                <span class="metric-label">Average ROI</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Professional Experience</h2>
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title">Digital Marketing Specialist</div>
-                <div><span class="company">Swagat Properties</span> | <span class="location-date">Thane, Maharashtra | 2022–Present</span></div>
-            </div>
-            <div class="achievements">
-                <div class="achievement-category">YOUTUBE & CONTENT STRATEGY</div>
-                <ul>
-                    <li>Developed comprehensive YouTube strategy for Marathi-speaking audience, increasing CTR by 45%</li>
-                    <li>Generated ₹1,82,273 in YouTube revenue while growing subscribers from 600 to 12,000</li>
-                    <li>Attributed 70% of total sales pipeline to inbound YouTube content and SEO-driven funnels</li>
-                    <li>Achieved ₹5L+ monthly pipeline with only ₹8K/month ad budget (62.5x ROAS)</li>
-                </ul>
-                
-                <div class="achievement-category">LOCAL SEO & GOOGLE OPTIMIZATION</div>
-                <ul>
-                    <li>Achieved #1 Google ranking for "Property consultant Thane" and 12+ high-intent keywords</li>
-                    <li>Generated 500,000+ Google Maps views and managed 1,365+ reviews (4.9-star rating)</li>
-                    <li>Increased business calls by 74.2% (1,063 → 1,848) and interactions by 78.6%</li>
-                    <li>Reduced cost-per-lead to ₹47 vs industry average of ₹150</li>
-                </ul>
-                
-                <div class="achievement-category">PAID ADVERTISING & AUTOMATION</div>
-                <ul>
-                    <li>Managed Google Ads campaigns achieving 47.85% conversion rate and 9.25% ROAS</li>
-                    <li>Generated 823 qualified leads in 2 months with ₹5.2L attributed sales</li>
-                    <li>Built WordPress websites, GA4 dashboards, and automated CRM lead tracking systems</li>
-                    <li>Delivered 60% of total company leads through integrated organic marketing efforts</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Core Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>YouTube & Video Marketing</h3>
-                <ul class="skill-list">
-                    <li>Channel Growth & Monetization</li>
-                    <li>YouTube SEO & Analytics</li>
-                    <li>Video Editing (CapCut/Adobe)</li>
-                    <li>Thumbnail Design & Optimization</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>SEO & Local Search</h3>
-                <ul class="skill-list">
-                    <li>Local SEO & Google My Business</li>
-                    <li>Keyword Research & Content Optimization</li>
-                    <li>Technical SEO & Site Audits</li>
-                    <li>SEMrush, GA4, Search Console</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Paid Advertising</h3>
-                <ul class="skill-list">
-                    <li>Google Ads (Search & Display)</li>
-                    <li>Meta Ads (Facebook/Instagram)</li>
-                    <li>YouTube Ads & Campaign Optimization</li>
-                    <li>Conversion Tracking & ROI Analysis</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Marketing Technology</h3>
-                <ul class="skill-list">
-                    <li>WordPress/Elementor Development</li>
-                    <li>CRM Management & Automation</li>
-                    <li>Google Tag Manager & Analytics</li>
-                    <li>Lead Generation & Landing Pages</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Certifications & Education</h2>
-        <ul class="cert-list">
-            <div class="cert-category">Digital Marketing & Strategy</div>
-            <li>Digital Marketing & Strategy – IIM Bangalore (Swayam)</li>
-            <li>AI in Digital Marketing & Social Media Marketing – IIMB (Swayam)</li>
-            <li>Google Fundamentals of Digital Marketing</li>
-            <li>Google Ads Certification (Search & Display Ads)</li>
-            <li>YouTube Creator Academy (Monetization)</li>
+    <div class="container">
+        <header>
+            <h1>YouTube Marketing Specialist</h1>
+            <p class="subtitle">Channel Growth Expert • Content Strategy • Revenue Generation • 3+ Years Experience</p>
             
-            <div class="cert-category">SEO & Analytics</div>
-            <li>HubSpot SEO Certification – HubSpot Academy</li>
-            <li>Advanced Google Analytics (GA4)</li>
-            <li>Advanced SEO Certification – Simplilearn</li>
-        </ul>
-    </div>
+            <div class="intro-text">
+                <p><strong>About Me:</strong> I'm a YouTube marketing specialist with 3+ years of hands-on experience building profitable YouTube channels from scratch. I've mastered the art of creating content that not only engages audiences but generates direct revenue through AdSense monetization and lead generation.</p>
+                
+                <p><strong>My YouTube Expertise:</strong> I specialize in creating sustainable YouTube growth strategies for businesses. From channel setup and content planning to optimization and monetization, I handle every aspect of building a profitable YouTube presence that serves as both a marketing channel and revenue stream.</p>
+                
+                <p><strong>Proven YouTube Success:</strong> I transformed a local real estate company's YouTube presence from zero to a thriving channel that generates ₹1.82L+ in direct AdSense revenue while establishing them as the go-to property experts in their market.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">₹1.82L</span>
+                    <span class="stat-label">AdSense Revenue Generated</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">12.9K</span>
+                    <span class="stat-label">Subscribers Grown</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3.1M+</span>
+                    <span class="stat-label">Total Video Views</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">7.7%</span>
+                    <span class="stat-label">Average CTR Achieved</span>
+                </div>
+            </div>
+        </header>
 
-    <!-- Portfolio Call-to-Action Footer -->
-    <div class="portfolio-banner" style="margin-top: 30px;">
-        <h3>📈 Want to See the Complete Picture?</h3>
-        <a href="https://bit.ly/rashmifodse" target="_blank" class="portfolio-link">
-            🔗 VIEW DETAILED CASE STUDIES
-        </a>
-        <p style="margin: 15px 0 0 0; font-size: 0.9em; opacity: 0.9;">
-            Screenshots of actual results • Step-by-step strategies • Visual proof of ROI
-        </p>
-    </div>
+        <section class="section">
+            <h2 class="section-title">YouTube Channel Development & Growth</h2>
+            
+            <div class="section-description">
+                <p><strong>Challenge:</strong> Build a profitable YouTube channel from zero for a real estate company in a competitive market, creating content that would both educate viewers and generate direct revenue.</p>
+                
+                <p><strong>My YouTube Strategy:</strong> Developed a comprehensive content framework focusing on property tours, market analysis, and educational videos. Created a consistent posting schedule with optimized thumbnails, SEO-focused titles, and engaging content that positioned the client as the local property authority.</p>
+                
+                <p><strong>Revenue Achievement:</strong> Successfully monetized the channel to generate ₹1.82L in direct AdSense revenue over 14 months while growing from 600 to 12,900 subscribers and achieving 3.1M+ total views.</p>
+            </div>
 
-    <script>
-        // Optimize for printing
-        window.addEventListener('beforeprint', function() {
-            document.body.style.fontSize = '11pt';
-            document.body.style.lineHeight = '1.4';
-        });
-        
-        window.addEventListener('afterprint', function() {
-            document.body.style.fontSize = '';
-            document.body.style.lineHeight = '';
-        });
-        
-        // Track portfolio link clicks
-        document.querySelectorAll('.portfolio-link').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Portfolio link clicked from resume');
-            });
-        });
-    </script>
+            <div class="highlight-box">
+                <div class="highlight-title">Complete YouTube Success Metrics</div>
+                <div class="highlight-content">
+                    <div class="results-grid">
+                        <div>
+                            <strong>Direct Revenue:</strong> ₹1,82,273 (AdSense)<br>
+                            <strong>Subscriber Growth:</strong> 600 → 12,900 (+2,050%)<br>
+                            <strong>Total Views:</strong> 3.1M+ organic views<br>
+                            <strong>Content Uploaded:</strong> 150+ videos
+                        </div>
+                        <div>
+                            <strong>Average CTR:</strong> 7.7% (above 5% benchmark)<br>
+                            <strong>Upload Schedule:</strong> 3-4 videos per week<br>
+                            <strong>Average View Duration:</strong> High retention rate<br>
+                            <strong>Channel Authority:</strong> Top property channel in region
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-area">
+                <h4>YouTube Studio Analytics</h4>
+                <p>Upload screenshot showing AdSense revenue, subscriber growth curve, and detailed channel analytics</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Content Strategy & Video Production</h2>
+            
+            <div class="section-description">
+                <p><strong>Content Planning:</strong> Developed a strategic content calendar focusing on high-search-volume keywords in the real estate niche. Created series including property tours, market updates, investment guides, and buyer education content.</p>
+                
+                <p><strong>Production Workflow:</strong> Established efficient video production processes including location scouting, filming techniques, editing workflows, and thumbnail creation. Maintained consistent branding and quality standards across all content.</p>
+                
+                <p><strong>SEO Optimization:</strong> Implemented YouTube SEO best practices including keyword research, optimized titles and descriptions, strategic tag usage, and custom thumbnails designed for maximum click-through rates.</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="card-title">Content Categories Developed</div>
+                    <div class="metric-row">
+                        <span class="metric-label">Property Tour Videos</span>
+                        <span class="metric-value">60+ tours filmed</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Market Analysis Content</span>
+                        <span class="metric-value">25+ analytical videos</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Educational Series</span>
+                        <span class="metric-value">40+ how-to guides</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Client Testimonials</span>
+                        <span class="metric-value">15+ success stories</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <div class="card-title">Technical Production Skills</div>
+                    <div class="metric-row">
+                        <span class="metric-label">Video Editing Software</span>
+                        <span class="metric-value">Advanced proficiency</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Thumbnail Design</span>
+                        <span class="metric-value">High-CTR templates</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">SEO Optimization</span>
+                        <span class="metric-value">Keyword-focused titles</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Analytics Tracking</span>
+                        <span class="metric-value">Performance monitoring</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-area">
+                <h4>Content Performance & Video Analytics</h4>
+                <p>Upload screenshots showing top-performing videos, watch time analytics, and content strategy results</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Channel Monetization & Revenue Streams</h2>
+            
+            <div class="section-description">
+                <p><strong>AdSense Optimization:</strong> Successfully achieved YouTube Partner Program requirements and optimized ad placements for maximum revenue. Monitored RPM (Revenue Per Mille) and adjusted content strategy to increase monetization efficiency.</p>
+                
+                <p><strong>Indirect Revenue Generation:</strong> While AdSense provided direct income, the channel also generated substantial indirect revenue through lead generation, with viewers contacting the business after watching property tour videos.</p>
+                
+                <p><strong>Long-term Value Creation:</strong> Built a sustainable content library that continues generating views and revenue. Created evergreen content that maintains search rankings and provides ongoing value to both viewers and the business.</p>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-title">Revenue Breakdown & Business Impact</div>
+                <div class="highlight-content">
+                    <div class="results-grid">
+                        <div>
+                            <strong>Direct AdSense Revenue:</strong> ₹1,82,273<br>
+                            <strong>Average Monthly Earnings:</strong> ₹13,000+<br>
+                            <strong>Revenue Per View:</strong> ₹0.59 average<br>
+                            <strong>Monetization Timeline:</strong> Achieved in 8 months
+                        </div>
+                        <div>
+                            <strong>Indirect Business Value:</strong> Lead generation<br>
+                            <strong>Brand Authority:</strong> Market leadership established<br>
+                            <strong>Long-term Asset:</strong> Ongoing passive income<br>
+                            <strong>Competitive Advantage:</strong> Unique market position
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshot-area">
+                <h4>AdSense Revenue Dashboard</h4>
+                <p>Upload screenshot showing monthly AdSense earnings, revenue trends, and monetization performance</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">YouTube Technical Skills & Tools</h2>
+            
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h4>YouTube Platform Expertise</h4>
+                    <ul class="tool-list">
+                        <li>YouTube Studio (Advanced Analytics)</li>
+                        <li>YouTube SEO & Keyword Research</li>
+                        <li>Channel Optimization & Branding</li>
+                        <li>AdSense Integration & Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h4>Video Production</h4>
+                    <ul class="tool-list">
+                        <li>Video Editing Software (Premiere/Final Cut)</li>
+                        <li>Thumbnail Design (Canva Pro)</li>
+                        <li>Audio Enhancement & Editing</li>
+                        <li>Mobile Filming Techniques</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h4>Content Strategy</h4>
+                    <ul class="tool-list">
+                        <li>Keyword Research Tools (VidIQ/TubeBuddy)</li>
+                        <li>Content Calendar Planning</li>
+                        <li>Competitor Analysis</li>
+                        <li>Trend Identification & Timing</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h4>Analytics & Optimization</h4>
+                    <ul class="tool-list">
+                        <li>YouTube Analytics Interpretation</li>
+                        <li>Performance Tracking & Reporting</li>
+                        <li>A/B Testing (Titles/Thumbnails)</li>
+                        <li>Revenue Optimization Strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Case Study: Building a Profitable Real Estate YouTube Channel</h2>
+            
+            <div class="section-description">
+                <p><strong>Client:</strong> Swagat Properties - Real estate company in Thane, Maharashtra</p>
+                <p><strong>Project Duration:</strong> 3+ years of channel development and optimization</p>
+                <p><strong>Starting Point:</strong> 600 subscribers, minimal content, no monetization</p>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-title">Complete Channel Transformation</div>
+                <div class="highlight-content">
+                    <p><strong>YouTube Success Metrics:</strong></p>
+                    <p>• <strong>Subscriber Growth:</strong> 600 → 12,900 subscribers (2,050% increase)</p>
+                    <p>• <strong>AdSense Revenue:</strong> ₹1,82,273 generated over 14 months</p>
+                    <p>• <strong>Content Library:</strong> 150+ professional property videos created</p>
+                    <p>• <strong>View Performance:</strong> 3.1M+ total views with 7.7% average CTR</p>
+                    <p>• <strong>Market Position:</strong> Became the leading property channel in the region</p>
+                    
+                    <br>
+                    <p><em>"This YouTube channel became both a marketing asset and a revenue stream, proving that well-executed content marketing can deliver measurable financial returns while building brand authority."</em></p>
+                </div>
+            </div>
+
+            <div class="screenshot-area">
+                <h4>Before/After Channel Growth Documentation</h4>
+                <p>Upload comparison screenshots showing subscriber growth, revenue progression, and channel development over time</p>
+            </div>
+        </section>
+
+        <div class="contact-section">
+            <h2 class="contact-title">Let's Discuss Your Marketing Goals</h2>
+            <p class="contact-description">
+                Ready to implement proven strategies that generate real results? Let's talk about how I can help scale your business through data-driven digital marketing.
+            </p>
+            
+            <button class="contact-button">Send Email</button>
+            <button class="contact-button">Schedule Call</button>
+            
+            <div class="contact-info">
+                <p>📧 your.email@domain.com</p>
+                <p>📱 +91 XXXXX XXXXX</p>
+                <p>💼 LinkedIn Profile</p>
+                <p>📍 Available for remote and on-site projects</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
